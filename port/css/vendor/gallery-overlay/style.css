@@ -1,0 +1,332 @@
+
+/* ============================================================
+  GLOBAL
+============================================================ */
+	.effects {
+	  padding-left: 15px;
+	}
+	.effects .img {
+	  position: relative;
+	  float: left;
+	  margin-bottom:0 !important;
+	  width: 100%;
+	  overflow: hidden;
+	}
+	.effects .img:nth-child(n) {
+	  margin-right: 5px;
+	}
+	.effects .img:first-child {
+	  margin-left: -15px;
+	}
+	.effects .img:last-child {
+	  margin-right: 0;
+	}
+	.effects .img img {
+	  display: block;
+	  margin: 0;
+	  padding: 0;
+	  max-width: 100%;
+	  height: auto;
+	}
+	.overlay {
+	  display: block;
+	  position: absolute;
+	  z-index: 20;
+	  background: rgba(0, 0, 0, 0.5);
+	  overflow: hidden;
+	  -webkit-transition: all 0.5s;
+	  -moz-transition: all 0.5s;
+	  -o-transition: all 0.5s;
+	  transition: all 0.5s;
+	}
+	a.close-overlay {
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  z-index: 100;
+	  width: 45px;
+	  height: 45px;
+	  font-size: 20px;
+	  font-weight: 700;
+	  color: #fff;
+	  line-height: 45px;
+	  text-align: center;
+	  background-color: #000;
+	  cursor: pointer;
+	}
+	a.close-overlay.hidden {
+	  display: none;
+	}
+	a.expand, a.expand-text {
+	  display: block;
+	  position: absolute;
+	  z-index: 100;
+	  width: 60px;
+	  height: 60px;
+	  border: solid 5px #fff;
+	  text-align: center;
+	  color: #fff;
+	  line-height: 40px;
+	  font-weight: 400;
+	  font-size: 24px;
+	  -webkit-border-radius: 30px;
+	  -moz-border-radius: 30px;
+	  -ms-border-radius: 30px;
+	  -o-border-radius: 30px;
+	  border-radius: 30px;
+	}
+	a.expand-text  {
+		width:100%;
+		border:0px;
+	}
+	a.expand-text span {
+		font-size:18px;
+		font-style:italic;
+	}
+
+
+/* ============================================================
+  EFFECT 3 - SLIDE IN LEFT
+============================================================ */
+	#our-team .overlay, #grid .overlay {
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  width: 0;
+	  height: 100%;
+	}
+	#our-team .overlay a.expand, #grid .overlay a.expand {
+	  top: 0;
+	  bottom: 0;
+	  left: 12%;
+	  margin: auto 0 auto -30px;
+	}
+	#our-team .overlay a.expand 	{
+	  top: 33%;
+	  left: 12%;
+	  margin:0 -28px;
+	}
+	#our-team .img.hover .overlay, #grid .img.hover .overlay  {
+	  width: 100%;
+	}
+	#grid .overlay a.extend-icon, #grid .overlay a.extend-icon-two  {
+		left:35%;
+		background-color:rgba(238,22,59,0.4);
+		border:0px;
+		padding-top:9px;
+		font-size:20px;
+	}
+	#grid .overlay a.extend-icon-two  {
+		left:60%;
+	}
+	#grid img  {
+		width:100%;
+	}
+	#our-team .overlay a 	{
+		text-decoration:none;
+	}
+
+/* OVERLAY CUSTOM CSS */
+	.team-social {
+		top:55%;
+		left:-14px;
+		position:absolute;
+	}
+	.team-social .social-media {
+		list-style-type:none;
+	}
+	.team-social .social-media {
+		display:inline-block;
+		height:40px;
+		width:40px;
+		border:2px solid #ffffff;
+		background-color:transparent;
+		border-radius:50%;
+		text-align:center;
+		padding-top:5px;
+		margin-left:20px;
+	}
+	.team-social a  {
+		color:#fff;
+		font-size:19px;
+	}
+	.team-social .social-media:hover {
+		border:2px solid #0892d0;
+		background-color:#0892d0;
+		transition:1.5s;
+	}
+
+/* Media Queries */
+
+@media(min-width:992px) and (max-width:1199px) {
+	.team-social  {
+		left:-42px;
+		top:60%;
+	}
+	#grid .overlay a.extend-icon, #grid .overlay a.extend-icon-two  {
+		left:25%;
+		}
+	#grid .overlay a.extend-icon-two  {
+		left:66%;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+  .effects {
+    padding-left: 5px;
+  }
+  .effects .img {
+    width: 100%;
+  }
+  .effects .img:nth-child(n) {
+    margin-right: 5px;
+  }
+  .effects .img:first-child {
+    margin-left: 0;
+  }
+  .effects .img:nth-child(2n-1) {
+    margin-left: -5px;
+  }
+  .effects .img:nth-child(2n) {
+    margin-right: 0;
+  }
+  .effects .img:last-child {
+    margin-right: 0;
+  }
+}
+@media(max-width:991px) and (min-width:768px) {
+	#grid .overlay a.extend-icon-two  {
+		left:63%;
+	}
+	#grid .overlay a.extend-icon   {
+		left:32%;
+	}
+	
+	a.expand, a.expand-text  {
+		font-size:18px;
+		line-height:30px;
+	}
+	#our-team .overlay a.expand  {
+		margin:0 -18px;
+	}
+	.team-social .social-media  {
+		height:30px;
+		width:30px;
+		padding-top:0px;
+	}
+	.team-social  {
+		left:-55px;
+		top:59%;
+	}
+	#grid .overlay a.extend-icon, #grid .overlay a.extend-icon-two  {
+		padding-top:15px;
+	}
+}
+
+@media(max-width:767px) and (min-width:500px) {
+	#grid .overlay a.extend-icon-two  {
+		left:52%;
+	}
+	#grid .overlay a.extend-icon   {
+		left:38%;
+	}
+
+}
+@media(max-width:767px) {
+	.team-social  {
+		left:16px;
+	}
+	#our-team .overlay a.expand 	{
+		top:39%;
+		left:8%;
+	}
+	
+}
+@media(max-width:640px) {
+	.team-social  {
+		left:-2px;
+	}
+	#our-team .overlay a.expand  {
+		top:36%;
+		left:10%;
+	}
+}
+@media(max-width:640px) {
+	.team-social  {
+		left:-13px;
+	}
+}
+@media(max-width:530px) {
+	.team-social  {
+		left:-36px;
+	}
+	#our-team .overlay a.expand  {
+		top:30%;
+	}
+}
+@media(max-width:500px) {
+	.team-social  {
+		left:-43px;
+		top:58%;
+	}
+}
+@media only screen and (max-width: 520px) {
+  .effects .img {
+    width: 100%;
+  }
+  .effects .img:nth-child(n) {
+    margin-right: 0;
+  }
+  .effects .img:first-child {
+    margin-left: 0;
+  }
+  .effects .img:nth-child(2n-1) {
+    margin-left: 0;
+  }
+  .effects .img:nth-child(2n) {
+    margin-right: 0;
+  }
+  .effects .img:last-child {
+    margin-right: 0;
+  }
+  .effects .img img {
+    margin: 0 auto;
+  }
+}
+@media(max-width:480px) {
+	#our-team .overlay a.expand  {
+		left:14%;
+	}
+}
+@media(max-width:460px) {
+	.team-social {
+		left:15%;
+	}
+	#our-team .overlay a.expand 	{
+		top:32%;
+		left:9%;
+	}
+}
+@media(max-width:400px) {
+	.team-social {
+		left:8%;
+	}
+}
+@media(max-width:380px) {
+	.team-social {
+		left:3%;
+		top:51%;
+	}
+}
+@media(max-width:350px) {
+	.team-social {
+		left:-2%;
+	}
+}
+@media(max-width:380px) {
+	.team-social {
+		left:-8%;
+		top:53%;
+	}
+}
